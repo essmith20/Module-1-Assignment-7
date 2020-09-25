@@ -1,0 +1,25 @@
+Susceptible = {"Rick", "Lori", "Carl", "Glenn", "Jackie", "Hershel", "Maggie"}
+Infected = {"Shane", "Dale", "Hershel"}
+Removed = {"Lori", "Shane", "Dale", "Jackie"}
+
+Survivors = {"Rick", "Lori", "Carl", "Glenn", "Jackie", "Hershel", "Maggie", "Shane", "Dale"}
+
+#I created the set 'Survivors', which lists all of the names in the other sets.
+#The function below the comments goes through each of the names in the set
+#'Survivors', and checks to see if they are in the given sets.
+
+
+def walking_dead():
+  for survivor in Survivors:
+    if survivor in Susceptible and survivor in Removed:
+      print (survivor, "was killed by a human.")
+    elif survivor in Infected and survivor in  Removed:
+      print (survivor, "was killed by a zombie.")
+    elif survivor in Infected or survivor in  Removed:
+      print (survivor, "has not survived.")
+    elif survivor in Susceptible and survivor in Infected and survivor in Removed:
+      print (surivor, "has come back from being a zombie.")
+    else:
+      print (survivor, "has not been killed or zombified.")
+    
+walking_dead()
